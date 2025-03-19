@@ -1,53 +1,44 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 void PrintWelcoming()
 {
     cout << "\t\t\t\t\t==========================================\n";
-    cout << "\t\t\t\t                    Hi, World               ";
-    cout << "\n\t\t\t\t\t==========================================\n";
-
+    cout << "\t\t\t\t                    Hi, World               \n";
+    cout << "\t\t\t\t\t==========================================\n";
 }
 
-
-void ReadNumber(int& Mark1, int& Mark2, int& Mark3)
+void ReadNumber(float& Mark1, float& Mark2, float& Mark3)
 {
-    cout << "Please Enter Mark 1? "; 
+    cout << "Please Enter Mark 1? ";
     cin >> Mark1;
-    cout << "Please Enter Mark 2? "; 
+    cout << "Please Enter Mark 2? ";
     cin >> Mark2;
     cout << "Please Enter Mark 3? ";
     cin >> Mark3;
 }
 
-int SumOf3Marks(int Mark1, int Mark2, int Mark3)
+float SumOf3Marks(float Mark1, float Mark2, float Mark3)
 {
-    return Mark1 + Mark1 + Mark3;
+    return Mark1 + Mark2 + Mark3;
 }
 
-int AverageMark(int Sum)
+float AverageMark(float Mark1, float Mark2, float Mark3)
 {
-    return Sum / 3;
+    return SumOf3Marks(Mark1, Mark2, Mark3) / 3;
 }
 
-void PrintResult(int Total)
+void PrintResult(float Total)
 {
     cout << "Average of Marks is: " << Total;
 }
 
-
 int main()
 {
-    
     PrintWelcoming();
-    int Mark1, Mark2, Mark3;
+    float Mark1, Mark2, Mark3;
     ReadNumber(Mark1, Mark2, Mark3);
-    PrintResult(AverageMark(SumOf3Marks(Mark1, Mark2, Mark3)));
-  
-
-
-
+    PrintResult(AverageMark(Mark1, Mark2, Mark3));
     system("pause>0");
-    return 0; 
+    return 0;
 }
