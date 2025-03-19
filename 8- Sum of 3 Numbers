@@ -1,0 +1,50 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void PrintWelcoming()
+{
+    cout << "\t\t\t\t\t==========================================\n";
+    cout << "\t\t\t\t                    Hi, World               ";
+    cout << "\n\t\t\t\t\t==========================================\n";
+
+}
+
+
+void ReadNumber(int& Num1, int& Num2, int& Num3)
+{
+    cout << "Please Enter Number 1? "; 
+    cin >> Num1;
+    cout << "Please Enter Number 2? "; 
+    cin >> Num2;
+    cout << "Please Enter Number 3? ";
+    cin >> Num3;
+}
+
+int SumOf3Numbers(int Num1, int Num2, int Num3)
+{
+    return Num1 + Num2 + Num3;
+}
+
+
+
+void PrintResult(int Total)
+{
+    cout << "Sum of 3 Number is: " << Total;
+}
+
+
+int main()
+{
+    
+    PrintWelcoming();
+    int Num1,  Num2,  Num3;
+    ReadNumber(Num1, Num2, Num3);
+    PrintResult(SumOf3Numbers(Num1, Num2, Num3));
+  
+
+
+
+    system("pause>0");
+    return 0; 
+}
