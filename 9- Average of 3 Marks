@@ -1,0 +1,53 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void PrintWelcoming()
+{
+    cout << "\t\t\t\t\t==========================================\n";
+    cout << "\t\t\t\t                    Hi, World               ";
+    cout << "\n\t\t\t\t\t==========================================\n";
+
+}
+
+
+void ReadNumber(int& Mark1, int& Mark2, int& Mark3)
+{
+    cout << "Please Enter Mark 1? "; 
+    cin >> Mark1;
+    cout << "Please Enter Mark 2? "; 
+    cin >> Mark2;
+    cout << "Please Enter Mark 3? ";
+    cin >> Mark3;
+}
+
+int SumOf3Marks(int Mark1, int Mark2, int Mark3)
+{
+    return Mark1 + Mark1 + Mark3;
+}
+
+int AverageMark(int Sum)
+{
+    return Sum / 3;
+}
+
+void PrintResult(int Total)
+{
+    cout << "Average of Marks is: " << Total;
+}
+
+
+int main()
+{
+    
+    PrintWelcoming();
+    int Mark1, Mark2, Mark3;
+    ReadNumber(Mark1, Mark2, Mark3);
+    PrintResult(AverageMark(SumOf3Marks(Mark1, Mark2, Mark3)));
+  
+
+
+
+    system("pause>0");
+    return 0; 
+}
