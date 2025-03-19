@@ -1,0 +1,53 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void PrintWelcoming()
+{
+    cout << "\t\t\t\t\t==========================================\n";
+    cout << "\t\t\t\t                    Hi, World               ";
+    cout << "\n\t\t\t\t\t==========================================\n";
+
+}
+
+
+struct Info
+{
+    int Age;
+    bool HasDrivingLicense;
+};
+ 
+Info ReadInfo()
+{
+    Info Info;
+    cout << "how old are you? ";
+    cin >> Info.Age;
+    
+    cout << "do you have a license? ";
+    cin >> Info.HasDrivingLicense;
+    return Info;
+}
+bool IsAccepted(Info Info)
+{
+    return (Info.Age > 18 && Info.HasDrivingLicense);
+}
+
+void PrintResult(Info Info)
+{
+    if (IsAccepted(Info))
+        cout << "\nHired!";
+    else
+        cout << "\nRejected!";
+
+}
+
+
+int main()
+{
+    PrintWelcoming();
+    PrintResult(ReadInfo());
+
+
+    system("pause>0");
+    return 0; 
+}
