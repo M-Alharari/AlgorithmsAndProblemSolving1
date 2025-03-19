@@ -1,0 +1,50 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void PrintWelcoming()
+{
+    cout << "\t\t\t\t\t==========================================\n";
+    cout << "\t\t\t\t                    Hi, World               ";
+    cout << "\n\t\t\t\t\t==========================================\n";
+
+}
+
+
+struct stInfo
+{
+    string FirstName;
+    string LastName;
+};
+ 
+stInfo ReadInfo()
+{
+    stInfo Info;
+    cout << "Please enter your first name? ";
+    cin >> Info.FirstName;
+   
+    cout << "Please enter your last name ? ";
+    cin >> Info.LastName;
+
+    return Info;
+}
+
+void PrintFullName(stInfo Info)
+{
+    cout << "Your full  name is: " + Info.FirstName + " " + Info.LastName;
+
+}
+
+
+int main()
+{
+    PrintWelcoming();
+    PrintFullName(ReadInfo());
+
+  
+
+
+
+    system("pause>0");
+    return 0; 
+}
