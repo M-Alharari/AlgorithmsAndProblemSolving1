@@ -1,0 +1,49 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void PrintWelcoming()
+{
+    cout << "\t\t\t\t\t==========================================\n";
+    cout << "\t\t\t\t                    Hi, World               ";
+    cout << "\n\t\t\t\t\t==========================================\n";
+
+}
+
+int ReadMark()
+{
+    int Mark;
+    cout << "Please Enter a Mark? ";
+    cin >> Mark;
+    return Mark;
+}
+
+int IsPassed(int Mark)
+{
+    return (Mark >= 50);
+}
+
+void PrintResult(int Mark)
+{
+    if (IsPassed(Mark))
+        cout << "Passed!";
+    else
+        cout << "Failed!";
+
+}
+
+
+
+
+int main()
+{
+    PrintWelcoming();
+    PrintResult(ReadMark());
+
+  
+
+
+
+    system("pause>0");
+    return 0; 
+}
