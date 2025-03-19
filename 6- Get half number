@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void PrintWelcoming()
+{
+    cout << "\t\t\t\t\t==========================================\n";
+    cout << "\t\t\t\t                    Hi, World               ";
+    cout << "\n\t\t\t\t\t==========================================\n";
+
+}
+
+int ReadNumber()
+{
+    int Number;
+    cout << "Please Enter a Number? ";
+    cin >> Number;
+    return Number;
+}
+
+int GetHalfNumber(int Num)
+{
+    int Result = Num / 2;
+    return Result;
+}
+
+void PrintResult(int Num)
+{
+    cout << "Half of " + to_string(Num) + " is " + to_string ( GetHalfNumber(Num));
+}
+
+
+
+
+int main()
+{
+    PrintWelcoming();
+    PrintResult(ReadNumber());
+
+  
+
+
+
+    system("pause>0");
+    return 0; 
+}
